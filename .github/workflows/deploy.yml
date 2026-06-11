@@ -1,0 +1,48 @@
+name: Deploy to Xserver
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Upload website files
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FTP_SERVER: ${{ secrets.XSERVER_FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.XSERVER_FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.XSERVER_FTP_PASSWORD }}
+      SERVER_DIR: ${{ secrets.XSERVER_SERVER_DIR }}
+    steps:
+      - name: Check deployment secrets
+        if: ${{ env.FTP_SERVER == '' || env.FTP_USERNAME == '' || env.FTP_PASSWORD == '' || env.SERVER_DIR == '' }}
+        run: |
+          echo "::notice::Xserver FTP secrets are not set yet. Skipping deployment."
+          echo "Required secrets: XSERVER_FTP_SERVER, XSERVER_FTP_USERNAME, XSERVER_FTP_PASSWORD, XSERVER_SERVER_DIR"
+
+      - name: Checkout
+        if: ${{ env.FTP_SERVER != '' && env.FTP_USERNAME != '' && env.FTP_PASSWORD != '' && env.SERVER_DIR != '' }}
+        uses: actions/checkout@v6
+
+      - name: Sync files to Xserver
+        if: ${{ env.FTP_SERVER != '' && env.FTP_USERNAME != '' && env.FTP_PASSWORD != '' && env.SERVER_DIR != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.XSERVER_FTP_SERVER }}
+          username: ${{ secrets.XSERVER_FTP_USERNAME }}
+          password: ${{ secrets.XSERVER_FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          server-dir: ${{ secrets.XSERVER_SERVER_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .github/**
+            .gitignore
+            AGENTS.md
+            アップロード手順.md
