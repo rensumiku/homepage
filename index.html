@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>株式会社SumiX | Shinobi-cartと海外展開の楽しい事業づくり</title>
     <meta name="description" content="株式会社SumiXは、Shinobi-cartを軸に、日本の商品・人・事業が海外へ直接つながる販路づくり、制度活用支援、プログラミング教育、コワーキングを展開しています。">
+    <link rel="canonical" href="https://www.sumix.jp/">
     <meta property="og:title" content="株式会社SumiX">
     <meta property="og:description" content="日本の挑戦を、世界の遊び場へ。Shinobi-cartと海外展開支援、教育、コワーキングのSumiX。">
     <meta property="og:type" content="website">
@@ -13,19 +14,112 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="株式会社SumiX ロゴ">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="株式会社SumiX">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.sumix.jp/assets/images/sumix-og-image.png">
-    <meta name="theme-color" content="#071B3A">
+    <meta name="theme-color" content="#071B3A" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a1628" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.sumix.jp/#organization",
+          "name": "株式会社SumiX",
+          "alternateName": "SumiX Inc.",
+          "url": "https://www.sumix.jp/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.sumix.jp/assets/images/sumix-card-logo.png",
+            "width": 400,
+            "height": 140
+          },
+          "image": "https://www.sumix.jp/assets/images/sumix-og-image.png",
+          "description": "Shinobi-cartを軸に、日本の商品・人・事業が海外へ直接つながる販路づくり、制度活用支援、プログラミング教育、コワーキングを展開しています。",
+          "foundingDate": "2023-04",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "北原町30-1 オフィスビル2F",
+            "addressLocality": "都城市",
+            "addressRegion": "宮崎県",
+            "addressCountry": "JP"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@sumix.jp",
+            "contactType": "customer service",
+            "availableLanguage": ["Japanese", "English"]
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "角倉 廉",
+            "jobTitle": "代表取締役CEO",
+            "image": "https://www.sumix.jp/assets/images/founder.jpg"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.sumix.jp/#website",
+          "url": "https://www.sumix.jp/",
+          "name": "株式会社SumiX",
+          "inLanguage": "ja",
+          "publisher": { "@id": "https://www.sumix.jp/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Shinobi-cartはいつ一般公開されますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "現在、越境購入体験の開発・テスト段階です。パートナー企業や連携ショップを募集中ですので、ご関心のある方はお気軽にお問い合わせください。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "補助金活用支援はどんな企業が対象ですか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "海外展開を検討・準備している中小企業・スタートアップが主な対象です。業種や規模を問わず、まずはご相談ください。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "都城以外からも相談できますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "もちろんです。オンラインでの打ち合わせに対応しており、全国・海外どこからでもご相談いただけます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "ゆるラボは予約なしで使えますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ゆるラボは原則予約制です。ご利用前にお問い合わせフォームまたはメールでご連絡ください。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
+    <div class="page-progress" id="page-progress" role="progressbar" aria-label="ページ読み込み進捗" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
     <a class="skip-link" href="#main">本文へ移動</a>
+
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="SumiX トップへ">
-        <img class="brand-logo" src="assets/images/sumix-card-logo.png" alt="SumiX">
+        <img class="brand-logo" src="assets/images/sumix-card-logo.png" alt="SumiX" width="178" height="62">
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
         <span></span>
@@ -34,38 +128,41 @@
         <span class="sr-only">メニュー</span>
       </button>
       <nav class="site-nav" id="site-nav" data-nav>
-        <a href="#business">事業</a>
-        <a href="#shinobi">Shinobi-cart</a>
-        <a href="#topics">ニュース</a>
-        <a href="#company">会社概要</a>
-        <a class="nav-cta" href="#contact">相談する</a>
+        <a href="#business" data-nav-link>事業</a>
+        <a href="#shinobi" data-nav-link>Shinobi-cart</a>
+        <a href="#topics" data-nav-link>ニュース</a>
+        <a href="#faq" data-nav-link>FAQ</a>
+        <a href="#company" data-nav-link>会社概要</a>
+        <a class="nav-cta" href="#contact" data-nav-link>相談する</a>
       </nav>
     </header>
 
     <main id="main">
+
+      <!-- ── Hero ── -->
       <section class="hero" id="top">
         <canvas class="route-canvas" data-route-canvas aria-hidden="true"></canvas>
         <div class="hero-inner">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Global playground company</p>
-            <h1><span>日本の挑戦を、</span><span>世界の遊び場へ。</span></h1>
-            <p class="lead">
+          <div class="hero-copy">
+            <p class="eyebrow reveal" data-delay="0">Global playground company</p>
+            <h1 class="reveal" data-delay="80"><span>日本の挑戦を、</span><span>世界の遊び場へ。</span></h1>
+            <p class="lead reveal" data-delay="160">
               Shinobi-cartは始まり。海外販路、制度活用、学び、出会いの場を横断し、次の面白いことを事業として形にしていく。SumiXは、挑戦の入口を明るくひらく会社です。
             </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#business">事業を見る</a>
-              <a class="button secondary" href="#contact">問い合わせる</a>
+            <div class="hero-actions reveal" data-delay="240">
+              <a class="button primary magnetic" href="#business">事業を見る</a>
+              <a class="button secondary magnetic" href="#contact">問い合わせる</a>
             </div>
-            <div class="hero-stats" aria-label="SumiXの活動領域">
+            <div class="hero-stats reveal" data-delay="320" aria-label="SumiXの活動領域">
               <span><strong>Shinobi-cart</strong> first spark</span>
               <span><strong>4</strong> playgrounds</span>
               <span><strong>Miyakonojo</strong> base</span>
             </div>
           </div>
-          <div class="hero-stage reveal" aria-label="SumiXのプロジェクトが広がるイメージ">
+          <div class="hero-stage reveal" data-delay="100" aria-label="SumiXのプロジェクトが広がるイメージ">
             <div class="playground-board">
               <div class="playground-toolbar">
-                <img src="assets/images/sumix-card-logo.png" alt="SumiX">
+                <img src="assets/images/sumix-card-logo.png" alt="SumiX" width="118" height="41" loading="lazy">
                 <span>Idea playground</span>
               </div>
               <div class="launch-map">
@@ -85,7 +182,7 @@
                 <div class="project-node node-commerce">
                   <span>Direct sales</span>
                   <strong>海外販路</strong>
-                  <img src="assets/images/shinobi-cart-preview.jpg" alt="Shinobi-cartの画面イメージ">
+                  <img src="assets/images/shinobi-cart-preview.jpg" alt="Shinobi-cartの画面イメージ" width="198" height="70" loading="lazy">
                 </div>
                 <div class="project-node node-support">
                   <span>Support</span>
@@ -112,30 +209,56 @@
         </div>
       </section>
 
+      <!-- ── Marquee ── -->
       <section class="marquee-band" aria-label="SumiXの活動キーワード">
-        <div class="marquee-track">
+        <div class="marquee-track" aria-hidden="true">
           <span>Shinobi-cart</span>
           <span>Export support</span>
           <span>Subsidy navigation</span>
           <span>Programming education</span>
           <span>Coworking</span>
           <span>Direct global sales</span>
+          <span>Miyakonojo base</span>
           <span>Shinobi-cart</span>
           <span>Export support</span>
           <span>Subsidy navigation</span>
           <span>Programming education</span>
           <span>Coworking</span>
           <span>Direct global sales</span>
+          <span>Miyakonojo base</span>
         </div>
       </section>
 
+      <!-- ── Stats ── -->
+      <section class="stats-section" aria-label="SumiXの実績">
+        <div class="stats-inner">
+          <div class="stat-item reveal" data-delay="0">
+            <span class="stat-num" data-count="3" aria-label="3年以上">0</span>
+            <p>年以上の<br>ビジネス経験</p>
+          </div>
+          <div class="stat-item reveal" data-delay="80">
+            <span class="stat-num" data-count="4" aria-label="4領域">0</span>
+            <p>つの<br>事業領域</p>
+          </div>
+          <div class="stat-item reveal" data-delay="160">
+            <span class="stat-num" data-count="5" aria-label="5プロジェクト">0</span>
+            <p>つ以上の<br>プロジェクト経験</p>
+          </div>
+          <div class="stat-item reveal" data-delay="240">
+            <span class="stat-num" data-count="2023" aria-label="2023年設立">0</span>
+            <p>年<br>設立</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Intro ── -->
       <section class="section intro-section">
         <div class="section-grid">
           <div class="section-heading reveal">
             <p class="eyebrow">Rebranding direction</p>
             <h2>「まじめな海外展開」を、動き出したくなる体験に変える。</h2>
           </div>
-          <div class="intro-copy reveal">
+          <div class="intro-copy reveal" data-delay="120">
             <p>
               輸出、EC、補助金、教育、コミュニティ。ばらばらに見える領域を、SumiXは「人と商品が新しい市場に出会う仕組み」としてつなぎます。
             </p>
@@ -146,6 +269,7 @@
         </div>
       </section>
 
+      <!-- ── Business ── -->
       <section class="section business-section" id="business">
         <div class="section-head reveal">
           <p class="eyebrow">Business domains</p>
@@ -154,25 +278,25 @@
         </div>
 
         <div class="business-grid">
-          <article class="business-card reveal" data-service="shinobi">
+          <article class="business-card reveal tilt-card" data-delay="0" data-service="shinobi">
             <div class="card-media card-media-blue">
-              <img src="assets/images/shinobi-logo-mark.png" alt="Shinobi-cart ロゴマーク">
+              <img src="assets/images/shinobi-logo-mark.png" alt="Shinobi-cart ロゴマーク" width="98" height="108" loading="lazy">
             </div>
             <p class="card-kicker">01 / Global commerce</p>
             <h3>Shinobi-cartで海外と直接つながる販路づくり</h3>
             <p>海外ユーザーが日本の商品を買いやすくなる仕組みを開発。購入、保管、同梱、海外配送までをシームレスにつなげます。</p>
           </article>
 
-          <article class="business-card reveal" data-service="export">
+          <article class="business-card reveal tilt-card" data-delay="60" data-service="export">
             <div class="card-media">
-              <img src="assets/images/warehouse.jpg" alt="海外配送に向けた倉庫の様子">
+              <img src="assets/images/warehouse.jpg" alt="海外配送に向けた倉庫の様子" width="400" height="178" loading="lazy">
             </div>
             <p class="card-kicker">02 / Export studio</p>
             <h3>輸出・海外展開の実務伴走</h3>
             <p>輸出書類、物流、マーケティング調査、現地パートナー開拓まで、海外に売るための現場を一緒に整えます。</p>
           </article>
 
-          <article class="business-card reveal" data-service="subsidy">
+          <article class="business-card reveal tilt-card" data-delay="120" data-service="subsidy">
             <div class="card-media card-media-system" aria-hidden="true">
               <span class="doc-card doc-card-one">計画</span>
               <span class="doc-card doc-card-two">申請</span>
@@ -183,7 +307,7 @@
             <p>海外展開に関わる補助金や制度の整理、申請前の事業設計、採択後の実行管理まで伴走します。</p>
           </article>
 
-          <article class="business-card reveal" data-service="education">
+          <article class="business-card reveal tilt-card" data-delay="0" data-service="education">
             <div class="card-media card-media-code" aria-hidden="true">
               <span>&lt;play&gt;</span>
               <strong>code + create</strong>
@@ -194,24 +318,36 @@
             <p>コード、AI、ものづくりを「遊びながら試す」体験に。子どもたちが未来の選択肢に触れる場をつくります。</p>
           </article>
 
-          <article class="business-card reveal" data-service="coworking">
+          <article class="business-card reveal tilt-card" data-delay="60" data-service="coworking">
             <div class="card-media">
-              <img src="assets/images/yurulabo-image.jpg" alt="ゆるラボのイメージビジュアル">
+              <img src="assets/images/yurulabo-image.jpg" alt="ゆるラボのイメージビジュアル" width="400" height="178" loading="lazy">
             </div>
             <p class="card-kicker">05 / Community</p>
             <h3>人と人が出会い、事業が生まれるコワーキング</h3>
             <p>宮崎県都城市の予約制スペース「ゆるラボ」を拠点に、事業者、学生、クリエイター、移住者がゆるやかにつながる場を運営します。</p>
-            <a class="text-link" href="yurulabo/">ゆるラボの詳細を見る</a>
+            <a class="text-link" href="yurulabo/">ゆるラボの詳細を見る →</a>
           </article>
         </div>
       </section>
 
+      <!-- ── Mid-page CTA band ── -->
+      <div class="cta-band" role="complementary" aria-label="お問い合わせ案内">
+        <div class="cta-band-inner">
+          <div class="cta-band-copy">
+            <p class="cta-band-label">まずは気軽にどうぞ</p>
+            <p class="cta-band-text">海外展開の第一歩、一緒に踏み出しませんか？</p>
+          </div>
+          <a href="#contact" class="button primary magnetic cta-band-btn">無料で相談する →</a>
+        </div>
+      </div>
+
+      <!-- ── Shinobi ── -->
       <section class="shinobi-section" id="shinobi">
         <div class="section-grid align-center">
           <div class="device-frame reveal">
-            <img src="assets/images/shinobi-cart-preview.jpg" alt="Shinobi-cartの画面イメージ">
+            <img src="assets/images/shinobi-cart-preview.jpg" alt="Shinobi-cartの画面イメージ" width="600" height="400" loading="lazy">
           </div>
-          <div class="shinobi-copy reveal">
+          <div class="shinobi-copy reveal" data-delay="120">
             <p class="eyebrow">Featured product</p>
             <h2>Shinobi-cartは、日本の商品を世界に届けるためのカートです。</h2>
             <p>
@@ -231,18 +367,19 @@
                 <p>海外の住所へ届ける</p>
               </div>
             </div>
-            <a class="button primary" href="#contact">導入・連携を相談する</a>
+            <a class="button primary magnetic" href="#contact">導入・連携を相談する</a>
           </div>
         </div>
       </section>
 
+      <!-- ── Support ── -->
       <section class="section support-section">
         <div class="section-head reveal">
           <p class="eyebrow">How we work</p>
           <h2>構想から運用まで、同じテーブルで進める。</h2>
         </div>
         <div class="support-layout">
-          <div class="support-panel reveal">
+          <div class="support-panel reveal" data-delay="0">
             <h3>海外展開支援</h3>
             <p>仕入先開拓、輸出先開拓、展示会出展、マーケティング調査、物流・通関まわりまで、実務を前提に計画します。</p>
             <ul>
@@ -251,7 +388,7 @@
               <li>海外パートナー、販売先、顧客リサーチ</li>
             </ul>
           </div>
-          <div class="support-panel reveal">
+          <div class="support-panel reveal" data-delay="80">
             <h3>制度活用支援</h3>
             <p>補助金や公的制度は、申請書だけでなく実行できる事業設計が大切です。計画、体制、進捗管理をまとめて支えます。</p>
             <ul>
@@ -260,30 +397,31 @@
               <li>採択後の実行・報告に向けた伴走</li>
             </ul>
           </div>
-          <div class="support-photo reveal">
-            <img src="assets/images/yurulabo-image.jpg" alt="予約制で利用できるゆるラボのイメージ">
+          <div class="support-photo reveal" data-delay="160">
+            <img src="assets/images/yurulabo-image.jpg" alt="予約制で利用できるゆるラボのイメージ" width="600" height="420" loading="lazy">
           </div>
         </div>
       </section>
 
+      <!-- ── Topics ── -->
       <section class="topics-section" id="topics">
         <div class="section-head reveal">
           <p class="eyebrow">News & topics</p>
           <h2>取り組みトピック</h2>
           <p>公開時には日付やリンクを整えて、ニュースリリースとして更新していけます。</p>
         </div>
-        <div class="topic-controls reveal" aria-label="トピック絞り込み">
+        <div class="topic-controls reveal" aria-label="トピック絞り込み" role="group">
           <button class="is-active" type="button" data-topic-filter="all">すべて</button>
           <button type="button" data-topic-filter="shinobi">Shinobi</button>
           <button type="button" data-topic-filter="global">海外展開</button>
           <button type="button" data-topic-filter="community">地域・教育</button>
         </div>
-        <div class="topic-list">
+        <div class="topic-list" role="feed" aria-label="トピック一覧">
           <article class="topic-item reveal" data-topic="community">
             <time datetime="2026-06">2026.06</time>
             <div>
               <p class="topic-label">Education</p>
-              <h3><a href="https://www.kyusan-u.ac.jp/faculty/kokusai/news/kyusan_260609/" target="_blank" rel="noopener">九州産業大学「NPO・NGO論」で特別講義を実施</a></h3>
+              <h3><a href="https://www.kyusan-u.ac.jp/faculty/kokusai/news/kyusan_260609/" target="_blank" rel="noopener noreferrer">九州産業大学「NPO・NGO論」で特別講義を実施</a></h3>
               <p>国際協力、起業、NPO活動の経験をもとに、学生が社会課題との関わり方を考える授業に登壇しました。</p>
             </div>
           </article>
@@ -314,11 +452,12 @@
         </div>
       </section>
 
+      <!-- ── Lab ── -->
       <section class="section lab-section">
         <div class="lab-visual reveal">
-          <img src="assets/images/office-building.jpg" alt="SumiXが拠点を置く都城の建物">
+          <img src="assets/images/office-building.jpg" alt="SumiXが拠点を置く都城の建物" width="600" height="540" loading="lazy">
         </div>
-        <div class="lab-copy reveal">
+        <div class="lab-copy reveal" data-delay="120">
           <p class="eyebrow">Yuru Labo</p>
           <h2>都城から、世界につながる人の流れをつくる。</h2>
           <p>
@@ -348,13 +487,79 @@
         </div>
       </section>
 
+      <!-- ── FAQ ── -->
+      <section class="section faq-section" id="faq">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>よくあるご質問</h2>
+          <p>お問い合わせの前に、よくいただくご質問をまとめました。</p>
+        </div>
+        <div class="faq-list reveal" data-delay="80">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Shinobi-cartはいつ一般公開されますか？</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>現在、越境購入体験の開発・テスト段階です。パートナー企業や連携ショップを募集中ですので、ご関心のある方はお気軽にお問い合わせください。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>補助金活用支援はどんな企業が対象ですか？</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>海外展開を検討・準備している中小企業・スタートアップが主な対象です。業種や規模を問わず、まずはご相談ください。初回相談は無料で対応しています。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>都城以外からも相談できますか？</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>もちろんです。オンラインでの打ち合わせに対応しており、全国・海外どこからでもご相談いただけます。まずはお問い合わせフォームよりお気軽にご連絡ください。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>プログラミング教育の対象年齢は？</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>主に小学生〜中学生を対象としたワークショップを予定しています。詳細なプログラムや開催日程はお問い合わせください。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>ゆるラボは予約なしで使えますか？</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>ゆるラボは原則予約制です。ご利用前にお問い合わせフォームまたはメール（info@sumix.jp）でご連絡ください。空き状況を確認してご案内いたします。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>問い合わせへの返信はどのくらいかかりますか？</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>通常、1〜2営業日以内にご返信いたします。お急ぎの場合は、その旨をお問い合わせ内容にご記入いただくと優先的に対応いたします。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ── Company ── -->
       <section class="section company-section" id="company">
         <div class="section-grid">
           <div class="section-heading reveal">
             <p class="eyebrow">Company</p>
             <h2>会社概要</h2>
           </div>
-          <div class="company-content reveal">
+          <div class="company-content reveal" data-delay="100">
             <dl class="company-table">
               <div>
                 <dt>会社名</dt>
@@ -378,8 +583,8 @@
               </div>
             </dl>
           </div>
-          <div class="founder-profile reveal">
-            <img src="assets/images/founder.jpg" alt="代表取締役CEO 角倉廉">
+          <div class="founder-profile reveal" data-delay="80">
+            <img src="assets/images/founder.jpg" alt="代表取締役CEO 角倉廉" width="280" height="330" loading="lazy">
             <div>
               <p class="card-kicker">Founder / CEO</p>
               <h3>角倉 廉</h3>
@@ -394,6 +599,7 @@
         </div>
       </section>
 
+      <!-- ── Contact ── -->
       <section class="contact-section" id="contact">
         <div class="contact-inner">
           <div class="contact-copy reveal">
@@ -402,28 +608,42 @@
             <p>
               まずは雑談に近い段階でも大丈夫です。送信内容はSumiXの窓口に届き、内容を確認して担当者よりご連絡します。
             </p>
+            <div class="trust-bar" aria-label="信頼情報">
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">✓</span>
+                <span>返信は通常1〜2営業日以内</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">✓</span>
+                <span>初回相談は無料</span>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">✓</span>
+                <span>秘密厳守</span>
+              </div>
+            </div>
             <button class="email-copy" type="button" data-copy-email="info@sumix.jp">info@sumix.jp</button>
           </div>
 
-          <form class="contact-form reveal" action="contact.php" method="post" data-contact-form>
+          <form class="contact-form reveal" data-delay="120" action="contact.php" method="post" data-contact-form novalidate>
             <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="field-grid">
-              <label>
-                <span>お名前</span>
-                <input type="text" name="name" autocomplete="name" required>
+              <label class="field-label">
+                <span class="field-name">お名前 <abbr title="必須" class="required-mark">*</abbr></span>
+                <input type="text" name="name" autocomplete="name" required placeholder="山田 太郎">
               </label>
-              <label>
-                <span>会社名・団体名</span>
-                <input type="text" name="company" autocomplete="organization">
+              <label class="field-label">
+                <span class="field-name">会社名・団体名</span>
+                <input type="text" name="company" autocomplete="organization" placeholder="株式会社○○">
               </label>
             </div>
             <div class="field-grid">
-              <label>
-                <span>メールアドレス</span>
-                <input type="email" name="email" autocomplete="email" required>
+              <label class="field-label">
+                <span class="field-name">メールアドレス <abbr title="必須" class="required-mark">*</abbr></span>
+                <input type="email" name="email" autocomplete="email" required placeholder="example@mail.com">
               </label>
-              <label>
-                <span>相談したい領域</span>
+              <label class="field-label">
+                <span class="field-name">相談したい領域 <abbr title="必須" class="required-mark">*</abbr></span>
                 <select name="category" required>
                   <option value="">選択してください</option>
                   <option value="Shinobi-cart">Shinobi-cart</option>
@@ -435,39 +655,86 @@
                 </select>
               </label>
             </div>
-            <label>
-              <span>お問い合わせ内容</span>
-              <textarea name="message" rows="6" required></textarea>
+            <label class="field-label">
+              <span class="field-name">お問い合わせ内容 <abbr title="必須" class="required-mark">*</abbr></span>
+              <textarea name="message" rows="6" required placeholder="例）越境ECへの参入を検討していますが、何から始めればよいか分からず..."></textarea>
+              <span class="char-counter" aria-live="polite"><span id="char-count">0</span> 文字</span>
             </label>
             <label class="privacy-check">
               <input type="checkbox" name="privacy" value="agreed" required>
-              <span><a href="yurulabo/privacy-policy/">プライバシーポリシー</a>に同意します</span>
+              <span><a href="yurulabo/privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します</span>
             </label>
-            <button class="button primary submit-button" type="submit">送信する</button>
-            <p class="form-note">送信後、入力いただいたメールアドレス宛に返信いたします。</p>
+            <button class="button primary submit-button magnetic" type="submit" data-submit-btn>
+              <span class="submit-text">送信する</span>
+              <span class="submit-loading" aria-hidden="true">送信中…</span>
+            </button>
+            <p class="form-note">送信後、入力いただいたメールアドレス宛に自動返信メールをお送りします。</p>
           </form>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <div>
+      <div class="footer-main">
         <div class="footer-brand">
-          <img class="brand-logo" src="assets/images/sumix-card-logo.png" alt="SumiX">
+          <img class="brand-logo" src="assets/images/sumix-card-logo.png" alt="SumiX" width="176" height="61" loading="lazy">
+          <p>Play moves markets. SumiX connects Japanese ideas, products, and people to the world.</p>
         </div>
-        <p>Play moves markets. SumiX connects Japanese ideas, products, and people to the world.</p>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">サービス</p>
+            <a href="#business">事業一覧</a>
+            <a href="#shinobi">Shinobi-cart</a>
+            <a href="yurulabo/">ゆるラボ</a>
+          </div>
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">情報</p>
+            <a href="#topics">ニュース</a>
+            <a href="#faq">FAQ</a>
+            <a href="#company">会社概要</a>
+            <a href="#contact">お問い合わせ</a>
+          </div>
+          <div class="footer-nav-group">
+            <p class="footer-nav-title">法的情報</p>
+            <a href="yurulabo/terms/">利用規約</a>
+            <a href="yurulabo/privacy-policy/">プライバシーポリシー</a>
+            <a href="home/tokutei/">特定商取引法</a>
+          </div>
+        </nav>
       </div>
-      <nav aria-label="フッターナビゲーション">
-        <a href="#business">事業</a>
-        <a href="yurulabo/">ゆるラボ</a>
-        <a href="#topics">ニュース</a>
-        <a href="#company">会社概要</a>
-        <a href="yurulabo/terms/">利用規約</a>
-        <a href="yurulabo/privacy-policy/">Privacy</a>
-        <a href="home/tokutei/">特商法</a>
-      </nav>
-      <small>(C)2026 SumiX.inc</small>
+      <div class="footer-bottom">
+        <small>© 2026 株式会社SumiX. All rights reserved.</small>
+        <address class="footer-address">〒885-0000 宮崎県都城市北原町30-1 オフィスビル2F</address>
+      </div>
     </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="ページトップへ戻る" hidden>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="20" height="20">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta" id="floating-cta" aria-hidden="true" hidden>
+      <div class="floating-cta-inner">
+        <div class="floating-cta-copy">
+          <p class="floating-cta-label">まずは気軽にどうぞ</p>
+          <p class="floating-cta-text">海外展開のご相談、無料でお受けしています。</p>
+        </div>
+        <a href="#contact" class="button primary floating-cta-btn">相談する</a>
+        <button class="floating-cta-close" type="button" aria-label="閉じる">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Toast container -->
+    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="false"></div>
 
     <script src="assets/js/main.js" defer></script>
   </body>
