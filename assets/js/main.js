@@ -165,6 +165,9 @@
         requestAnimationFrame(() => backToTop.classList.add("is-visible"));
       } else {
         backToTop.classList.remove("is-visible");
+        window.setTimeout(() => {
+          if (!backToTop.classList.contains("is-visible")) backToTop.hidden = true;
+        }, 350);
       }
     };
     window.addEventListener("scroll", updateBackToTop, { passive: true });
@@ -195,6 +198,9 @@
     } else {
       floatingCta.classList.remove("is-visible");
       floatingCta.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => {
+        if (!floatingCta.classList.contains("is-visible")) floatingCta.hidden = true;
+      }, 450);
     }
   };
 
