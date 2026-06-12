@@ -90,6 +90,17 @@
 
   /* ── Reveal on scroll (IntersectionObserver) ── */
   const revealItems = document.querySelectorAll(".reveal");
+
+  const revealInView = () => {
+    revealItems.forEach((el) => {
+      if (el.classList.contains("is-visible")) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.96 && rect.bottom > 0) {
+        el.classList.add("is-visible");
+      }
+    });
+  };
+
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -100,12 +111,17 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.06, rootMargin: "0px 0px 0px 0px" }
     );
     revealItems.forEach((el) => observer.observe(el));
   } else {
     revealItems.forEach((el) => el.classList.add("is-visible"));
   }
+
+  /* Fallback: reveal anything already visible on load */
+  window.setTimeout(revealInView, 100);
+  window.setTimeout(revealInView, 600);
+  window.addEventListener("scroll", revealInView, { passive: true });
 
   /* ── Stats counter animation ── */
   const statNums = document.querySelectorAll(".stat-num[data-count]");
