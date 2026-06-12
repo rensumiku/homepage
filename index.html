@@ -140,8 +140,9 @@
     <main id="main">
 
       <!-- ── Hero ── -->
-      <section class="hero" id="top">
+      <section class="hero" id="top" data-theme="paper">
         <canvas class="route-canvas" data-route-canvas aria-hidden="true"></canvas>
+        <span class="giant-word" aria-hidden="true">PLAYGROUND</span>
         <div class="hero-inner">
           <div class="hero-copy">
             <p class="eyebrow reveal" data-delay="0">Global playground company</p>
@@ -227,6 +228,18 @@
           <span>Direct global sales</span>
           <span>Miyakonojo base</span>
         </div>
+        <div class="marquee-track marquee-reverse" aria-hidden="true">
+          <span>日本の挑戦を</span>
+          <span>世界の遊び場へ</span>
+          <span>Play moves markets</span>
+          <span>都城から世界へ</span>
+          <span>次の面白いことへ</span>
+          <span>日本の挑戦を</span>
+          <span>世界の遊び場へ</span>
+          <span>Play moves markets</span>
+          <span>都城から世界へ</span>
+          <span>次の面白いことへ</span>
+        </div>
       </section>
 
       <!-- ── Values ── -->
@@ -252,7 +265,7 @@
       </section>
 
       <!-- ── Intro ── -->
-      <section class="section intro-section">
+      <section class="section intro-section" data-theme="cream">
         <div class="section-grid">
           <div class="section-heading reveal">
             <p class="eyebrow">Rebranding direction</p>
@@ -270,7 +283,8 @@
       </section>
 
       <!-- ── Business ── -->
-      <section class="section business-section" id="business">
+      <section class="section business-section" id="business" data-theme="paper">
+        <span class="head-giant" aria-hidden="true">BUSINESS</span>
         <div class="section-head reveal">
           <p class="eyebrow">Business domains</p>
           <h2>SumiXの活動領域</h2>
@@ -342,7 +356,8 @@
       </div>
 
       <!-- ── Shinobi ── -->
-      <section class="shinobi-section" id="shinobi">
+      <section class="shinobi-section" id="shinobi" data-theme="navy">
+        <span class="head-giant head-giant-light" aria-hidden="true">PRODUCT</span>
         <div class="section-grid align-center">
           <div class="device-frame reveal">
             <img src="assets/images/shinobi-cart-preview.jpg" alt="Shinobi-cartの画面イメージ" width="600" height="400" loading="lazy">
@@ -373,7 +388,7 @@
       </section>
 
       <!-- ── Support ── -->
-      <section class="section support-section">
+      <section class="section support-section" data-theme="cream">
         <div class="section-head reveal">
           <p class="eyebrow">How we work</p>
           <h2>構想から運用まで、同じテーブルで進める。</h2>
@@ -404,7 +419,8 @@
       </section>
 
       <!-- ── Topics ── -->
-      <section class="topics-section" id="topics">
+      <section class="topics-section" id="topics" data-theme="paper">
+        <span class="head-giant" aria-hidden="true">NEWS</span>
         <div class="section-head reveal">
           <p class="eyebrow">News & topics</p>
           <h2>取り組みトピック</h2>
@@ -453,7 +469,7 @@
       </section>
 
       <!-- ── Lab ── -->
-      <section class="section lab-section">
+      <section class="section lab-section" data-theme="cream">
         <div class="lab-visual reveal">
           <img src="assets/images/office-building.jpg" alt="SumiXが拠点を置く都城の建物" width="600" height="540" loading="lazy">
         </div>
@@ -488,7 +504,8 @@
       </section>
 
       <!-- ── FAQ ── -->
-      <section class="section faq-section" id="faq">
+      <section class="section faq-section" id="faq" data-theme="paper">
+        <span class="head-giant" aria-hidden="true">FAQ</span>
         <div class="section-head reveal">
           <p class="eyebrow">FAQ</p>
           <h2>よくあるご質問</h2>
@@ -553,7 +570,8 @@
       </section>
 
       <!-- ── Company ── -->
-      <section class="section company-section" id="company">
+      <section class="section company-section" id="company" data-theme="cream">
+        <span class="head-giant" aria-hidden="true">ABOUT</span>
         <div class="section-grid">
           <div class="section-heading reveal">
             <p class="eyebrow">Company</p>
@@ -600,7 +618,8 @@
       </section>
 
       <!-- ── Contact ── -->
-      <section class="contact-section" id="contact">
+      <section class="contact-section" id="contact" data-theme="ink">
+        <span class="head-giant head-giant-light" aria-hidden="true">CONTACT</span>
         <div class="contact-inner">
           <div class="contact-copy reveal">
             <p class="eyebrow">Contact</p>
@@ -735,6 +754,10 @@
 
     <!-- Toast container -->
     <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
 
     <script src="assets/js/main.js" defer></script>
   </body>

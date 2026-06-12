@@ -510,3 +510,70 @@
     history.replaceState(null, "", window.location.pathname + window.location.hash);
   }
 })();
+
+/* ── Bold redesign layer ── */
+(() => {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* Scroll-driven body theme: section at viewport middle wins */
+  const themedSections = document.querySelectorAll("section[data-theme]");
+  if (themedSections.length) {
+    const applyTheme = () => {
+      const mid = window.innerHeight / 2;
+      let theme = "paper";
+      themedSections.forEach((sec) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < mid && rect.bottom > mid) theme = sec.dataset.theme;
+      });
+      if (document.body.dataset.theme !== theme) {
+        document.body.dataset.theme = theme;
+      }
+    };
+    window.addEventListener("scroll", applyTheme, { passive: true });
+    window.addEventListener("resize", applyTheme, { passive: true });
+    applyTheme();
+  }
+
+  /* Custom cursor (fine pointers only) */
+  const finePointer = window.matchMedia("(pointer: fine)");
+  const dot  = document.querySelector(".cursor-dot");
+  const ring = document.querySelector(".cursor-ring");
+
+  if (dot && ring && finePointer.matches && !reducedMotion.matches) {
+    document.body.classList.add("has-custom-cursor");
+
+    let mx = -100, my = -100;   // mouse position
+    let rx = -100, ry = -100;   // ring position (lerped)
+
+    document.addEventListener("pointermove", (e) => {
+      mx = e.clientX;
+      my = e.clientY;
+      dot.style.left = `${mx}px`;
+      dot.style.top  = `${my}px`;
+    }, { passive: true });
+
+    const lerp = () => {
+      rx += (mx - rx) * 0.16;
+      ry += (my - ry) * 0.16;
+      ring.style.left = `${rx}px`;
+      ring.style.top  = `${ry}px`;
+      requestAnimationFrame(lerp);
+    };
+    requestAnimationFrame(lerp);
+
+    const hoverTargets = "a, button, summary, input, select, textarea, label";
+    document.addEventListener("pointerover", (e) => {
+      if (e.target.closest(hoverTargets)) ring.classList.add("is-hover");
+    });
+    document.addEventListener("pointerout", (e) => {
+      if (e.target.closest(hoverTargets)) ring.classList.remove("is-hover");
+    });
+
+    document.addEventListener("pointerleave", () => {
+      document.body.classList.remove("has-custom-cursor");
+    });
+    document.addEventListener("pointerenter", () => {
+      document.body.classList.add("has-custom-cursor");
+    });
+  }
+})();
