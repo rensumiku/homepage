@@ -2337,3 +2337,13 @@ body.has-custom-cursor summary { cursor: none; }
   .head-giant { top: 12px; font-size: clamp(3.4rem, 16vw, 5rem); }
   .giant-word { font-size: clamp(4rem, 20vw, 7rem); }
 }
+
+/* ── Compact floating CTA on mobile (was covering FAQ items) ── */
+@media (max-width: 680px) {
+  .floating-cta { bottom: 12px; right: 76px; left: 12px; }
+  .floating-cta-inner { padding: 10px 14px; gap: 10px; flex-wrap: nowrap; }
+  .floating-cta-label { display: none; }
+  .floating-cta-copy { flex: 1 1 auto; }
+  .floating-cta-text { font-size: 0.8rem; }
+  .floating-cta-btn { flex: 0 0 auto; min-height: 38px; padding: 8px 14px; font-size: 0.84rem; }
+}

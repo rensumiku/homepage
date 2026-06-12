@@ -219,6 +219,17 @@
     updateFloatingCta();
   }
 
+  /* ── FAQ accordion fallback ──
+     iOS Safari doesn't toggle <details> when the tap lands on a child
+     of a flex <summary>, so handle the toggle ourselves. */
+  document.querySelectorAll(".faq-item > summary").forEach((summary) => {
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+      const details = summary.parentElement;
+      details.open = !details.open;
+    });
+  });
+
   /* ── Toast system ── */
   const toastContainer = document.getElementById("toast-container");
   const showToast = ({ type = "success", title, message, duration = 5000 }) => {
