@@ -81,7 +81,16 @@ if ($errors !== []) {
 }
 
 $to = 'info@sumix.jp';
-$subject = '【SumiX Web】お問い合わせ: ' . $category;
+$categoryLabels = [
+    'Shinobi-cart' => 'Shinobi-cart',
+    '海外展開・輸出' => 'Export',
+    '補助金・制度活用' => 'Subsidy',
+    '教育事業' => 'Education',
+    'コワーキング・イベント' => 'Coworking',
+    'その他' => 'Other',
+];
+$subjectCategory = $categoryLabels[$category] ?? 'General';
+$subject = '[SumiX] Web inquiry - ' . $subjectCategory;
 $body = <<<BODY
 SumiXホームページからお問い合わせがありました。
 
@@ -104,7 +113,6 @@ SumiXホームページからお問い合わせがありました。
 {$_SERVER['REMOTE_ADDR']}
 BODY;
 
-$encodedSubject = mb_encode_mimeheader($subject, 'UTF-8');
 $headers = [
     'From: SumiX Website <info@sumix.jp>',
     'Reply-To: ' . $email,
@@ -113,7 +121,7 @@ $headers = [
     'X-Mailer: PHP/' . phpversion(),
 ];
 
-$sent = mb_send_mail($to, $encodedSubject, $body, implode("\r\n", $headers));
+$sent = mb_send_mail($to, $subject, $body, implode("\r\n", $headers));
 
 if ($sent) {
     render_page('送信しました', 'お問い合わせありがとうございます。内容を確認し、担当者よりご連絡いたします。', true);
