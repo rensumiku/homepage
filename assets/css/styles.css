@@ -2347,3 +2347,91 @@ body.has-custom-cursor summary { cursor: none; }
   .floating-cta-text { font-size: 0.8rem; }
   .floating-cta-btn { flex: 0 0 auto; min-height: 38px; padding: 8px 14px; font-size: 0.84rem; }
 }
+
+/* ═══════════════════════════════════════
+   Intro overlay (first-load reveal)
+═══════════════════════════════════════ */
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 38%, rgba(18, 105, 243, 0.32), transparent 70%),
+    #071b3a;
+  overflow: hidden;
+  animation: intro-out 0.8s var(--ease-out) 1.85s forwards;
+}
+
+.intro-inner {
+  text-align: center;
+  padding: 0 24px;
+}
+
+.intro-eyebrow {
+  margin: 0 0 18px;
+  color: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0;
+  animation: intro-fade 0.7s var(--ease-out) 0.15s forwards;
+}
+
+.intro-title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.9rem, 6vw, 4.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  font-weight: 900;
+}
+
+.intro-line {
+  display: block;
+  overflow: hidden;
+  padding: 0 0.04em;
+}
+
+.intro-line > span {
+  display: inline-block;
+  transform: translateY(115%);
+  animation: intro-rise 0.85s var(--ease-out) forwards;
+}
+
+.intro-line:nth-child(1) > span { animation-delay: 0.3s; }
+.intro-line:nth-child(2) > span { animation-delay: 0.42s; }
+
+.intro-bar {
+  display: block;
+  width: 0;
+  height: 4px;
+  margin: 30px auto 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--blue), var(--mint), var(--yellow), var(--coral));
+  animation: intro-bar 0.8s var(--ease-out) 0.85s forwards;
+}
+
+body.intro-active {
+  overflow: hidden;
+}
+
+/* Skip the intro entirely after first view this session, on reduced motion, or print */
+html.intro-seen .intro { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .intro { display: none; }
+}
+
+@media print {
+  .intro { display: none; }
+}
+
+@keyframes intro-fade { to { opacity: 1; } }
+@keyframes intro-rise { to { transform: translateY(0); } }
+@keyframes intro-bar  { to { width: min(300px, 62vw); } }
+@keyframes intro-out  {
+  to { transform: translateY(-100%); visibility: hidden; }
+}

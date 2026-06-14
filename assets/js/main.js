@@ -2,6 +2,34 @@
    SumiX — main.js
    ═══════════════════════════════════════════════ */
 
+/* ── Intro overlay lifecycle ── */
+(() => {
+  const intro = document.getElementById("intro");
+  if (!intro) return;
+
+  /* Hidden by CSS (already seen this session, reduced motion, or print):
+     just drop the node, don't lock scroll. */
+  if (getComputedStyle(intro).display === "none") {
+    intro.remove();
+    return;
+  }
+
+  document.body.classList.add("intro-active");
+
+  const finish = () => {
+    if (!document.body.contains(intro)) return;
+    intro.remove();
+    document.body.classList.remove("intro-active");
+  };
+
+  intro.addEventListener("animationend", (e) => {
+    if (e.animationName === "intro-out") finish();
+  });
+
+  /* Safety net in case animationend never fires */
+  window.setTimeout(finish, 3200);
+})();
+
 (() => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
